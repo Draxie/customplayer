@@ -1,0 +1,286 @@
+body,
+html {
+  padding: 0px;
+  margin: 0px;
+}
+
+body {
+  background-color: #223135;
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: 0 0 200px 10vh black inset;
+          box-shadow: 0 0 200px 10vh black inset;
+}
+
+.wrapper {
+  width: 70vw;
+}
+
+.wrapper .player {
+  width: 100%;
+  position: relative;
+}
+
+.wrapper .player .video-container {
+  width: 100%;
+}
+
+.wrapper .player .video-container video {
+  width: 100%;
+}
+
+.wrapper .player .controls .time-bar {
+  -webkit-appearance: none;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  height: 10px;
+  background: -webkit-gradient(linear, left top, right top, from(#438686), color-stop(0%, #9b9b9b));
+  background: linear-gradient(90deg, #438686 0%, #9b9b9b 0%);
+  margin: 0px;
+}
+
+.wrapper .player .controls .time-bar::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 0px;
+  height: 0px;
+}
+
+.wrapper .player .controls .buttons {
+  width: 100%;
+  height: 98%;
+  position: absolute;
+  top: 0px;
+  display: none;
+  -ms-grid-columns: 10% 20% 40% 20% 10%;
+      grid-template-columns: 10% 20% 40% 20% 10%;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+  gap: 0px 0px;
+      grid-template-areas: "volume back play-pause forward speed";
+}
+
+.wrapper .player .controls .buttons button {
+  outline: 0px;
+  border: 0px;
+  background: none;
+  color: white;
+}
+
+.wrapper .player .controls .buttons .volume {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: volume;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.wrapper .player .controls .buttons .volume .volume-control {
+  top: -10%;
+  position: relative;
+  left: -27%;
+  font-size: 28px;
+  margin-bottom: 48%;
+}
+
+.wrapper .player .controls .buttons .volume .volume-control:hover {
+  cursor: pointer;
+}
+
+.wrapper .player .controls .buttons .volume .volume-slider {
+  width: 140%;
+  top: -6%;
+  -webkit-appearance: none;
+  position: relative;
+  left: -47%;
+  -webkit-transform: rotate(270deg);
+          transform: rotate(270deg);
+  background: -webkit-gradient(linear, left top, right top, color-stop(100%, white), to(#9b9b9b));
+  background: linear-gradient(90deg, white 100%, #9b9b9b 100%);
+}
+
+.wrapper .player .controls .buttons .volume .volume-slider:hover {
+  cursor: pointer;
+}
+
+.wrapper .player .controls .buttons .volume .volume-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 5px;
+  height: 8px;
+}
+
+.wrapper .player .controls .buttons .back {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: back;
+  font-size: 80px;
+  -webkit-transition: -webkit-transform 2s;
+  transition: -webkit-transform 2s;
+  transition: transform 2s;
+  transition: transform 2s, -webkit-transform 2s;
+}
+
+.wrapper .player .controls .buttons .back:hover {
+  cursor: pointer;
+  -webkit-transform: rotate(-60deg);
+          transform: rotate(-60deg);
+}
+
+.wrapper .player .controls .buttons .back:hover i {
+  text-shadow: 0 0 22px #ffffff;
+}
+
+.wrapper .player .controls .buttons .play-pause {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: play-pause;
+  font-size: 80px;
+}
+
+.wrapper .player .controls .buttons .play-pause:hover {
+  cursor: pointer;
+}
+
+.wrapper .player .controls .buttons .play-pause:hover i {
+  text-shadow: 0 0 22px #ffffff;
+}
+
+.wrapper .player .controls .buttons .forward {
+  -ms-grid-row: 1;
+  -ms-grid-column: 4;
+  grid-area: forward;
+  font-size: 80px;
+  -webkit-transition: -webkit-transform 2s;
+  transition: -webkit-transform 2s;
+  transition: transform 2s;
+  transition: transform 2s, -webkit-transform 2s;
+}
+
+.wrapper .player .controls .buttons .forward:hover {
+  cursor: pointer;
+  -webkit-transform: rotate(60deg);
+          transform: rotate(60deg);
+}
+
+.wrapper .player .controls .buttons .forward:hover i {
+  text-shadow: 0 0 22px #ffffff;
+}
+
+.wrapper .player .controls .buttons .speed {
+  -ms-grid-row: 1;
+  -ms-grid-column: 5;
+  grid-area: speed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.wrapper .player .controls .buttons .speed .speed-control {
+  position: relative;
+  right: -27%;
+  top: -10%;
+  font-size: 20px;
+  margin-bottom: 50%;
+}
+
+.wrapper .player .controls .buttons .speed .speed-control:hover {
+  cursor: pointer;
+}
+
+.wrapper .player .controls .buttons .speed .speed-slider {
+  width: 140%;
+  top: -6%;
+  -webkit-appearance: none;
+  position: relative;
+  right: -6%;
+  -webkit-transform: rotate(270deg);
+          transform: rotate(270deg);
+  background: -webkit-gradient(linear, left top, right top, color-stop(50%, white), color-stop(50%, #9b9b9b));
+  background: linear-gradient(90deg, white 50%, #9b9b9b 50%);
+}
+
+.wrapper .player .controls .buttons .speed .speed-slider:hover {
+  cursor: pointer;
+}
+
+.wrapper .player .controls .buttons .speed .speed-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 5px;
+  height: 8px;
+}
+
+@media screen and (max-width: 1200px) {
+  .wrapper {
+    width: 90%;
+  }
+  .wrapper .controls .buttons .back {
+    font-size: 60px !important;
+  }
+  .wrapper .controls .buttons .play-pause {
+    font-size: 60px !important;
+  }
+  .wrapper .controls .buttons .forward {
+    font-size: 60px !important;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .wrapper {
+    width: 90%;
+  }
+  .wrapper .controls .buttons {
+    -ms-grid-columns: 10% 20% 40% 20% 10% !important;
+        grid-template-columns: 10% 20% 40% 20% 10% !important;
+  }
+  .wrapper .controls .buttons .back {
+    font-size: 40px !important;
+  }
+  .wrapper .controls .buttons .play-pause {
+    font-size: 40px !important;
+  }
+  .wrapper .controls .buttons .forward {
+    font-size: 40px !important;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .wrapper .player .controls .volume .volume-control {
+    font-size: 16px !important;
+  }
+  .wrapper .player .controls .volume .volume-slider {
+    height: 5px;
+    left: -53% !important;
+  }
+  .wrapper .player .controls .speed .speed-control {
+    font-size: 10px !important;
+  }
+  .wrapper .player .controls .speed .speed-slider {
+    height: 5px;
+    right: -4% !important;
+  }
+}
+/*# sourceMappingURL=main.css.map */

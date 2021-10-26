@@ -1,0 +1,264 @@
+body,
+html{
+    padding: 0px;
+    margin: 0px;
+}
+
+body{
+    background-color: rgb(34, 49, 53);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 200px 10vh black inset;
+}
+
+.wrapper{
+    width: 70vw;
+
+    .player{
+        width: 100%;
+        position: relative;
+
+        .video-container{
+            width: 100%;
+
+            video{
+                width: 100%;
+            }
+        }
+
+        .controls{
+            .time-bar{
+                -webkit-appearance: none;
+                position: absolute;
+                bottom: 0px;
+                width: 100%;
+                height: 10px;
+                background: linear-gradient(90deg, rgb(67, 134, 134) 0%, rgb(155, 155, 155) 0%);
+                margin: 0px;
+            }
+
+            .time-bar::-webkit-slider-thumb{
+                -webkit-appearance: none;
+                width: 0px;
+                height: 0px;
+            }
+
+            .buttons{
+                width: 100%;
+                height: 98%;
+                position: absolute;
+                top: 0px;
+                display: none; 
+                grid-template-columns: 10% 20% 40% 20% 10%;
+                grid-template-rows: 1fr; 
+                gap: 0px 0px; 
+                grid-template-areas: 
+                    "volume back play-pause forward speed"; 
+
+                button{
+                    outline: 0px;
+                    border: 0px;
+                    background: none;
+                    color: white;
+                }
+
+                .volume {
+                    grid-area: volume; 
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    
+                    .volume-control{
+                        top: -10%;
+                        position: relative;
+                        left: -27%;
+                        font-size: 28px;
+                        margin-bottom: 48%;
+                    }
+
+                    .volume-control:hover{
+                        cursor: pointer;
+                    }
+
+                    .volume-slider{
+                        width: 140%;
+                        top: -6%;
+                        -webkit-appearance: none;
+                        position: relative;
+                        left: -47%;
+                        transform: rotate(270deg);
+                        background: linear-gradient(90deg, rgb(255, 255, 255) 100%, rgb(155, 155, 155) 100%);
+                    }
+
+                    .volume-slider:hover{
+                        cursor: pointer;
+                    }
+
+                    .volume-slider::-webkit-slider-thumb{
+                        -webkit-appearance: none;
+                        width: 5px;
+                        height: 8px;
+                    }
+                }   
+
+                .back { 
+                    grid-area: back; 
+                    font-size: 80px;
+                    transition: transform 2s;
+                }
+
+                .back:hover{
+                    cursor: pointer;
+                    transform: rotate(-60deg);
+                    i{
+                        text-shadow: 0 0 22px #ffffff;
+                    }
+                }
+
+                .play-pause { 
+                    grid-area: play-pause; 
+                    font-size: 80px;
+                }
+
+                .play-pause:hover{
+                    cursor: pointer;
+                    i{
+                        text-shadow: 0 0 22px #ffffff;
+                    }
+                }
+
+                .forward { 
+                    grid-area: forward; 
+                    font-size: 80px;
+                    transition: transform 2s;
+                }
+
+                .forward:hover{
+                    cursor: pointer;
+                    transform: rotate(60deg);
+                    i{
+                        text-shadow: 0 0 22px #ffffff;
+                    }
+                }
+
+                .speed {
+                    grid-area: speed; 
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    
+                    .speed-control{
+                        position: relative;
+                        right: -27%;
+                        top: -10%;
+                        font-size: 20px;
+                        margin-bottom: 50%;
+                    }
+
+                    .speed-control:hover{
+                        cursor: pointer;
+                    }
+
+                    .speed-slider{
+                        width: 140%;
+                        top: -6%;
+                        -webkit-appearance: none;
+                        position: relative;
+                        right: -6%;
+                        transform: rotate(270deg);
+                        background: linear-gradient(90deg, rgb(255, 255, 255) 50%, rgb(155, 155, 155) 50%);
+                    }
+
+                    .speed-slider:hover{
+                        cursor: pointer;
+                    }
+
+                    .speed-slider::-webkit-slider-thumb{
+                        -webkit-appearance: none;
+                        width: 5px;
+                        height: 8px;
+                    }
+                }   
+            }
+        }
+    }
+}
+
+@media screen and(max-width:1200px){
+    .wrapper{
+        width: 90%;
+
+        .controls{
+             .buttons{
+                .back { 
+                    font-size: 60px !important;
+                }
+
+                .play-pause {
+                    font-size: 60px !important;
+                }
+
+                .forward { 
+                    font-size: 60px !important;
+                }
+            }
+        }
+    }
+}
+
+@media screen and(max-width:700px){
+    .wrapper{
+        width: 90%;
+
+        .controls{
+             .buttons{
+                grid-template-columns: 10% 20% 40% 20% 10% !important; 
+
+                .back { 
+                    font-size: 40px !important;
+                }
+
+                .play-pause {
+                    font-size: 40px !important;
+                }
+
+                .forward { 
+                    font-size: 40px !important;
+                }
+            }
+        }
+    }
+}
+
+@media screen and(max-width:550px){
+    .wrapper{
+        .player{
+            .controls{
+                .volume{
+                    .volume-control{
+                        font-size: 16px !important;
+                    }
+
+                    .volume-slider{
+                        height: 5px;
+                        left: -53% !important;
+                    }
+                }
+
+                .speed{
+                    .speed-control{
+                        font-size: 10px !important;
+                    }
+
+                    .speed-slider{
+                        height: 5px;
+                        right: -4% !important;
+                    }
+                }
+            }
+        }
+    }
+}
