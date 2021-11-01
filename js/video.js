@@ -7,6 +7,8 @@ var back = document.querySelector('.back')
 var forward = document.querySelector('.forward')
 var player = document.querySelector('.player')
 var buttons = document.querySelector('.buttons')
+var speedControl = document.querySelector('.speed-control')
+var volumeControl = document.querySelector('.volume-control')
 
 playBtn.addEventListener('click', function(){
     if(video.paused){
@@ -75,15 +77,19 @@ forward.addEventListener('click', function(){
 player.addEventListener('dblclick', function(){
   if (this.requestFullscreen) {
     this.requestFullscreen();
+    screen.orientation.lock('landscape');
   } 
   else if (this.mozRequestFullScreen) { 
     this.mozRequestFullScreen();
+    screen.orientation.lock('landscape');
   } 
   else if (this.webkitRequestFullscreen) { 
     this.webkitRequestFullscreen();
+    screen.orientation.lock('landscape');
   } 
   else if (this.msRequestFullscreen) { 
     this.msRequestFullscreen();
+    screen.orientation.lock('landscape');
   }
 })
 
@@ -99,3 +105,5 @@ player.addEventListener('mousemove', function(){
         }, 7000);
     }
 })
+
+volumeControl.addEventListener('click')
