@@ -112,6 +112,10 @@ a {
   font-size: 28px;
 }
 
+.wrapper .player .controls .buttons .volume .exit-fs-arrow:hover {
+  cursor: pointer;
+}
+
 .wrapper .player .controls .buttons .volume .volume-control {
   top: -10%;
   position: relative;

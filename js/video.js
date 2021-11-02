@@ -141,14 +141,8 @@ volumeControl.addEventListener('click', function(){
 
         case '<i class="fas fa-volume-mute" aria-hidden="true"></i>':
             volumeControl.innerHTML= '<i class="fas fa-volume-up"></i>';
-            if(video.volume === 0) {
-                video.volume = 0.1;
-                volume.value = 10;
-            }
-            else {
-                video.volume = volumeTemp / 100;
-                volume.value = volumeTemp;
-            }
+            video.volume = volumeTemp / 100;
+            volume.value = volumeTemp;
             UpdateBar(volume.value, 'white', volume);
             break;
     }
