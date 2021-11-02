@@ -83,6 +83,14 @@ a {
                     flex-direction: column;
                     justify-content: center;
                     
+                    .exit-fs-arrow{
+                        display: none;
+                        top: -35%;
+                        position: relative;
+                        left: -27%;
+                        font-size: 28px;
+                    }
+
                     .volume-control{
                         top: -10%;
                         position: relative;
@@ -213,6 +221,17 @@ a {
         width: 90%;
 
         .controls{
+            .volume{
+                .exit-fs-arrow{
+                    top: -30% !important;
+                    font-size: 25px !important;
+                }
+                
+                .volume-control{
+                    font-size: 22px !important;
+                }
+            }
+
              .buttons{
                 .back { 
                     font-size: 60px !important;
@@ -259,6 +278,11 @@ a {
         .player{
             .controls{
                 .volume{
+                    .exit-fs-arrow{
+                        top: -30% !important;
+                        font-size: 16px !important;
+                    }
+
                     .volume-control{
                         font-size: 16px !important;
                     }

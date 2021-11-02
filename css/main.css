@@ -21,6 +21,18 @@ body {
           box-shadow: 0 0 200px 10vh black inset;
 }
 
+* {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+input,
+textarea,
+button,
+select,
+a {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
 .wrapper {
   width: 70vw;
 }
@@ -90,6 +102,14 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.wrapper .player .controls .buttons .volume .exit-fs-arrow {
+  display: none;
+  top: -35%;
+  position: relative;
+  left: -27%;
+  font-size: 28px;
 }
 
 .wrapper .player .controls .buttons .volume .volume-control {
@@ -171,6 +191,16 @@ body {
   transition: -webkit-transform 2s;
   transition: transform 2s;
   transition: transform 2s, -webkit-transform 2s;
+  -webkit-tap-highlight-color: transparent;
+  outline: 0 none;
+  border: none;
+  background: none;
+}
+
+.wrapper .player .controls .buttons .forward:focus:not(:focus-visible) {
+  outline: 0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 .wrapper .player .controls .buttons .forward:hover {
@@ -237,6 +267,13 @@ body {
   .wrapper {
     width: 90%;
   }
+  .wrapper .controls .volume .exit-fs-arrow {
+    top: -30% !important;
+    font-size: 25px !important;
+  }
+  .wrapper .controls .volume .volume-control {
+    font-size: 22px !important;
+  }
   .wrapper .controls .buttons .back {
     font-size: 60px !important;
   }
@@ -268,6 +305,10 @@ body {
 }
 
 @media screen and (max-width: 550px) {
+  .wrapper .player .controls .volume .exit-fs-arrow {
+    top: -30% !important;
+    font-size: 16px !important;
+  }
   .wrapper .player .controls .volume .volume-control {
     font-size: 16px !important;
   }

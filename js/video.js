@@ -9,7 +9,12 @@ var player = document.querySelector('.player')
 var buttons = document.querySelector('.buttons')
 var speedControl = document.querySelector('.speed-control')
 var volumeControl = document.querySelector('.volume-control')
+var exitIcon = document.querySelector('.exit-fs-arrow')
 var volumeTemp = 100;
+
+exitIcon.addEventListener('click', function(){
+    document.exitFullscreen();
+})
 
 playBtn.addEventListener('click', function(){
     if(video.paused){
@@ -103,7 +108,14 @@ player.addEventListener('dblclick', function(){
     this.msRequestFullscreen();
     screen.orientation.lock('landscape');
   }
+  exitIcon.style.display = 'block';
 })
+
+window.onresize = function(event) {
+    if(window.innerHeight != screen.height) {
+        exitIcon.style.display = 'none';
+    }
+};
 
 let hidden= true;
 
