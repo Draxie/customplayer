@@ -14,7 +14,14 @@ var volumeTemp = 100;
 
 exitIcon.addEventListener('click', function(){
     document.exitFullscreen();
-})
+});
+
+speedControl.addEventListener('click', function(){
+    video.playbackRate = 1;
+    speed.value= 50;
+    speedControl.innerHTML= '<i class="fas fa-hourglass-half"></i>';
+    UpdateBar(speed.value, 'white', speed);
+});
 
 playBtn.addEventListener('click', function(){
     if(video.paused){
