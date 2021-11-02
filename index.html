@@ -1,38 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Video Player</title>
-    <script src="https://kit.fontawesome.com/1c7ee85c5e.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="/css/main.css">
-</head>
-<body>
+    <script
+      src="https://kit.fontawesome.com/1c7ee85c5e.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="/css/main.css" />
+  </head>
+  <body>
     <main class="wrapper">
-        <div class="player">
-            <div class="video-container">
-                <video id="video" src="/assets/video.mp4"></video>
-            </div>
-            <div class="controls">
-                <div class="buttons">
-                        <button class="play-pause"><i class="fas fa-play"></i></button>
-                        <button class="back"><i class="fas fa-undo"></i></button>
-                        <button class="forward"><i class="fas fa-redo"></i></button>
-                        <div class="volume">
-                            <button class="exit-fs-arrow"><i class="fas fa-arrow-left"></i></button>
-                            <button class="volume-control"><i class="fas fa-volume-up"></i></button>
-                            <input type="range" class="volume-slider" min="0" max="100" step="1">
-                        </div>
-                        <div class="speed">
-                            <button class="speed-control"><i class="fas fa-hourglass-half"></i></button>
-                            <input type="range" class="speed-slider" min="0" max="100" step="25">
-                        </div>
-                </div>
-                <input class="time-bar" type="range" min="0" max="100" step=".01">
-            </div>
+      <div class="player">
+        <div class="video-container">
+          <video id="video" src="/assets/video.mp4"></video>
         </div>
+        <div class="controls">
+          <div class="buttons">
+            <button class="play-pause"><i class="fas fa-play"></i></button>
+            <button class="back"><i class="fas fa-undo"></i></button>
+            <button class="forward"><i class="fas fa-redo"></i></button>
+            <div class="volume">
+              <button class="exit-fs-arrow">
+                <i class="fas fa-arrow-left"></i>
+              </button>
+              <button class="volume-control">
+                <i class="fas fa-volume-up"></i>
+              </button>
+              <input
+                type="range"
+                class="volume-slider"
+                min="0"
+                max="100"
+                step="1"
+              />
+            </div>
+            <div class="speed">
+              <button class="speed-control">
+                <i class="fas fa-hourglass-half"></i>
+              </button>
+              <input
+                type="range"
+                class="speed-slider"
+                min="0"
+                max="100"
+                step="25"
+              />
+            </div>
+          </div>
+          <input class="time-bar" type="range" min="0" max="100" step=".01" />
+        </div>
+      </div>
     </main>
     <script src="/js/video.js"></script>
-</body>
+  </body>
 </html>
